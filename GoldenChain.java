@@ -1,0 +1,14 @@
+class GoldenChain{
+	public static void main(String[] fashionFrill){
+	System.out.println("Main Started");
+		String classpType = "S-Hook";
+		String materialType = "Brass";
+		String chainType = "Rolo";
+		String countryOfOrigin = "India";
+			System.out.println("The Class Type is " + classpType);
+			System.out.println("The Material Type is " + materialType);
+			System.out.println("The Chain Type is " + chainType);
+			System.out.println("The Country OfOrigin " + countryOfOrigin);
+	System.out.println("Main Ended");
+	}
+}
