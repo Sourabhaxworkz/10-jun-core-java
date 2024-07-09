@@ -1,8 +1,10 @@
 class FanRunner{
-	public static void main(String[] aCTIVA){
+	public static void main(String[] args){
 		System.out.println("Main Started");
-			Fan.turnOn();
-			Fan.turnOff();
+		boolean connect = Fan.onOrOff();
+		System.out.println("is Fan connected:" + connect);
+		connect = Fan.onOrOff();
+		System.out.println("is Fan connected:" + connect);
 		System.out.println("Main Ended");
 	}
 }

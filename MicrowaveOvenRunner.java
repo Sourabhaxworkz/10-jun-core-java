@@ -1,9 +1,11 @@
 class MicrowaveOvenRunner{
-
-	public static void main(String[] lG){
-		System.out.println("Main started");
-			MicrowaveOven.turnOn();
-			MicrowaveOven.turnOff();
-		System.out.println("Main ended");
+	public static void main(String[] args){
+		System.out.println("Main Started");
+		boolean connect = MicrowaveOven.onOrOff();
+		System.out.println("is Microwave Oven connected:" + connect);
+		connect = MicrowaveOven.onOrOff();
+		System.out.println("is Microwave Oven connected:" + connect);
+		System.out.println("Main Ended");
 	}
+
 }

@@ -1,10 +1,10 @@
 class RefrigeratorRunner{
-
-	public static void main(String[] panasonic){
+	public static void main(String[] args){
 		System.out.println("Main Started");
-			Refrigerator.turnOn();
-			Refrigerator.turnOff();
+		boolean connect = Refrigerator.onOrOff();
+		System.out.println("is Refrigerator connected:" + connect);
+		connect = Refrigerator.onOrOff();
+		System.out.println("is Refrigerator connected:" + connect);
 		System.out.println("Main Ended");
-	
 	}
 }

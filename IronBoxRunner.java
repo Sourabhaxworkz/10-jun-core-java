@@ -1,8 +1,10 @@
 class IronBoxRunner{
-	public static void main(String[] bajaj){
+	public static void main(String[] args){
 		System.out.println("Main Started");
-			IronBox.turnOn();
-			IronBox.turnOff();
+		boolean connect = IronBox.onOrOff();
+		System.out.println("is Iron Box connected:" + connect);
+		connect = IronBox.onOrOff();
+		System.out.println("is Iron Box connected:" + connect);
 		System.out.println("Main Ended");
 	}
 }

@@ -1,9 +1,10 @@
 class GrinderRunner{
-
-	public static void main(String[] bajaj){
+	public static void main(String[] args){
 		System.out.println("Main Started");
-			Grinder.turnOn();
-			Grinder.turnOff();
+		boolean connect = Grinder.onOrOff();
+		System.out.println("is Grinder connected:" + connect);
+		connect = Grinder.onOrOff();
+		System.out.println("is Grinder connected:" + connect);
 		System.out.println("Main Ended");
 	}
 }
