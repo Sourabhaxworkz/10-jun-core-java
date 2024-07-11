@@ -1,10 +1,23 @@
 class GrinderRunner{
 	public static void main(String[] args){
 		System.out.println("Main Started");
-		boolean connect = Grinder.onOrOff();
-		System.out.println("is Grinder connected:" + connect);
-		connect = Grinder.onOrOff();
-		System.out.println("is Grinder connected:" + connect);
+		boolean on = Grinder.onOrOff();
+		System.out.println("The grinder is connected:" +on);
+			Grinder.increaseSpeed();
+			Grinder.increaseSpeed();
+			Grinder.increaseSpeed();
+			Grinder.increaseSpeed();
+			Grinder.increaseSpeed();
+			Grinder.increaseSpeed();
+			
+			Grinder.decreaseSpeed();
+			Grinder.decreaseSpeed();
+			Grinder.decreaseSpeed();
+			Grinder.decreaseSpeed();
+			Grinder.decreaseSpeed();
+			Grinder.decreaseSpeed();
+		on = Grinder.onOrOff();
+		System.out.println("The grinder is connected:" +on);
 		System.out.println("Main Ended");
 	}
 }

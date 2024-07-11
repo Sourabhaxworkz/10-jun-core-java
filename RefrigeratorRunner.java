@@ -1,10 +1,34 @@
 class RefrigeratorRunner{
 	public static void main(String[] args){
 		System.out.println("Main Started");
-		boolean connect = Refrigerator.onOrOff();
-		System.out.println("is Refrigerator connected:" + connect);
-		connect = Refrigerator.onOrOff();
-		System.out.println("is Refrigerator connected:" + connect);
+		boolean on = Refrigerator.onOrOff();
+		System.out.println("The refrigerator is oned:" +on);
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			Refrigerator.increaseCoolingTemp();
+			
+			
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+			Refrigerator.decreaseCoollingTemp();
+		on = Refrigerator.onOrOff();
+		System.out.println("The Refrigerator is oned:" +on);
 		System.out.println("Main Ended");
 	}
 }
