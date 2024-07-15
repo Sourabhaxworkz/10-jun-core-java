@@ -1,10 +1,13 @@
 class ZomatoRunner{
 	public static void main(String[] args){
-		System.out.println("Main started");
-			String foodItemName = "Paneer Zinger Burger";
-			double foodItemPrice = Zomato.zomatoFoodItems(foodItemName);
-			System.out.println("The food item name is " + foodItemName);
-			System.out.println("The food item price is " + foodItemPrice);
-		System.out.println("Main ended");
+		System.out.println("Main Started");
+			String foodName = "Paneer Zinger Burger";
+			int qnty = 3;
+			double priceOfFoodName = Zomato.search(foodName);
+			System.out.println("Food item name is " + foodName);
+			//System.out.println("Food item for one product is " + priceOfFoodName);
+			System.out.println("The quantity product is " + qnty);
+			System.out.println("Food item total price " + qnty*priceOfFoodName);
+		System.out.println("Main Ended");
 	}
 }
