@@ -6,7 +6,7 @@ class SbiBankAccount{
 	static String securePwd;
 		public static boolean createSbiBankAccount(long phoneNumber , String yourName , String accountType , String pwd , String confirmPwd){
 			boolean isSbiBankAccountCreated = false;
-			boolean isContactNumberValid = false;
+			/*boolean isContactNumberValid = false;
 			boolean isFullNameValid = false;
 			boolean isTypeOfAccountValid = false;
 			boolean isPasswordValid = false;
@@ -54,9 +54,59 @@ class SbiBankAccount{
 				fullName = yourName;
 				typeOfAccount = accountType;
 				password = pwd;
-				securePwd = confirmPwd;
+				securePwd = confirmPwd;*/
+			isSbiBankAccountCreated = validatingSbiBankAccountUserDetails(phoneNumber , yourName , accountType , pwd , confirmPwd);
 		return isSbiBankAccountCreated;
 		}
+		
+		public static boolean validatingSbiBankAccountUserDetails(long phoneNumber , String yourName , String accountType , String pwd , String confirmPwd){
+			boolean isAllFieldValidated = false;
+			boolean isContactNumberValid = false;
+			boolean isFullNameValid = false;
+			boolean isTypeOfAccountValid = false;
+			boolean isPasswordValid = false;
+			boolean isSecurePwdValid = false;
+			
+			if(phoneNumber != 0.0){
+				contactNumber = phoneNumber;
+				isContactNumberValid = true;
+			}
+			else
+				System.out.println("The contact number is invalid");
+			
+			if(yourName != null){
+				fullName = yourName;
+				isFullNameValid = true;
+			}
+			else
+				System.out.println("The User name is invalid");
+			
+			if(accountType != null){
+				typeOfAccount = accountType;
+				isTypeOfAccountValid = true;
+			}
+			else
+				System.out.println("The user account type is invalid");
+			
+			if(pwd != null){
+				password = pwd;
+				isPasswordValid =true;
+			}
+			else
+				System.out.println("The user password is invalid");
+			
+			if(confirmPwd != null){
+				securePwd = confirmPwd;
+				isSecurePwdValid = true;
+			}
+			else
+				System.out.println("Type user confirm password is invalid");
+			
+			if(isContactNumberValid == true && isFullNameValid==true && isTypeOfAccountValid==true && isPasswordValid==true && isSecurePwdValid==true)
+				isAllFieldValidated = true;
+		return isAllFieldValidated;
+		}
+	
 		public static void readUserSbiBankAccountDetails(){
 			System.out.println("The user Phone Number is " +contactNumber);
 			System.out.println("The user Name is " +fullName);
