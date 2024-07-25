@@ -35,6 +35,17 @@ class AmazonRunner{
 		System.out.println("Product names added " +produtAdded);
 		
 		Amazon.readProdutName();
+		
+		
+		boolean produtUpdate = Amazon.updateProdutName("Smart watch" , "Printer");
+		System.out.println("Product Name is updated" + produtUpdate);
+		
+		Amazon.readProdutName();
+		
+		boolean produtDelete = Amazon.deleteProdutName("Water Botell");
+		System.out.println("Product Name is Deleted" +produtDelete);
+		
+		Amazon.readProdutName();
 		System.out.println("Main Ended");
 	}
 }

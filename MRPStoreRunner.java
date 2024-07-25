@@ -35,6 +35,16 @@ class MRPStoreRunner{
 		System.out.println("medicine Names added " +alcoholNamesAdded);
 		
 		MRPStore.readalcoholNames();
+		
+		boolean alcoholNamesUpdate = MRPStore.updatealcoholNames("OldMonk" , "Jagermeister");
+		System.out.println("Alcohol Name is updated" + alcoholNamesUpdate);
+		
+		MRPStore.readalcoholNames();
+		
+		boolean alcoholNamesDelete = MRPStore.deletealcoholNames("Campari");
+		System.out.println("Alcohol Name is Deleted" +alcoholNamesDelete);
+		
+		MRPStore.readalcoholNames();
 		System.out.println("Main Ended");
 	}
 }
