@@ -17,4 +17,12 @@ class House{
 		this.areaInSqrt=areaInSqrt;
 		this.noOfMembers=noOfMembers;
 	}
+	public void displayDetails(){
+		System.out.println("House ID is " +houseID);
+		System.out.println("Number of rooms available is " +noOfRooms);
+		System.out.println("Number of Floors available is "+noOfFloors);
+		System.out.println("House Name is "+houseName);
+		System.out.println("House areaInSqrt "+areaInSqrt);
+		System.out.println("Number of Members "+noOfMembers);
+	}
 }

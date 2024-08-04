@@ -13,4 +13,10 @@ class SocialMedia{
 		this.profileName=profileName;
 		this.emailOfPerson=emailOfPerson;
 	}
+	public void displayDetails(){
+		System.out.println("SocialMedia ID is "+id);
+		System.out.println("Name of the Person "+nameOfPerson);
+		System.out.println("Profile Name is "+profileName);
+		System.out.println("Email Id of the person is "+emailOfPerson);
+	}
 }
