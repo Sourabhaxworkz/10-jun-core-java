@@ -111,7 +111,25 @@ later we will give the company name
 then we create a project folders in the systematic manner.
 
 7)
-
+class Number{
+import java.util.*; 
+  
+public class Main { 
+    public static void main(String[] args) 
+    { 
+        int[] int_arr = { 1, 2, 3, 4, 5, 6, 7 }; 
+      
+        System.out.print("Integer Array: [ "); 
+        for (int c : int_arr) { 
+            System.out.print(c + " "); 
+            ii++; 
+        } 
+        System.out.println("]"); 
+        System.out.println("]\n"); 
+        System.out.println("Size of integer array = " + ii); 
+       
+    } 
+}
 
 8)no, we can not use instance variable inside the static method 
 static methods cannot directly access the instance variable because 
