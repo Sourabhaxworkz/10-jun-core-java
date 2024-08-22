@@ -1,0 +1,196 @@
+1)public :is a access specifiers
+static :is a non access specifers
+void :is return type
+main:is used as has a method name
+String args[]: inside a parentheses we declared the parameters
+
+2)class:class is template or plan which is having both states and behavior
+object:Realtime entity of a class is called has object
+
+3)JVM:It will provide run time environment, loads the code, verifiy the code, execute the code stream by stream.
+JRE:It is the run time environment which is required to execute the java application or bytecode.
+JDK:it is a software development kit it contains necessary resource to compile as well as execute the java based application.
+
+2)Constructor:It is a special type of method, where name of the class is same as the name of the constructor, it is not having the return type in it.
+There are 2 types of constructor:
+1)parameterized constructor
+2)default constructor
+
+1)A default constructor in Java is a constructor that takes no arguments. It initializes an object with default values.
+2)A parameterized constructor in Java is a constructor that takes arguments to initialize an object with specific values.
+
+class Bill{
+
+	int billReferenceId;
+	int billSequenceNo;
+	String billIssueDate;
+	String billDueDate;
+	boolean isBillPaid;
+	boolean isLatestBill;
+	boolean isFinalBill;
+	double billAmount;
+	boolean istacInclusiveBill;
+	
+	public Bill(){
+		System.out.println("Bill Generated");
+	}
+	
+	public Bill(int billReferenceId , int billSequenceNo , String billIssueDate , String billDueDate , boolean isBillPaid , boolean isLatestBill , boolean isFinalBill , double billAmount , boolean istacInclusiveBill){
+		this.billReferenceId = billReferenceId;
+		this.billSequenceNo = billSequenceNo;
+		this.billIssueDate = billIssueDate;
+		this.billDueDate = billDueDate;
+		this.isBillPaid = isBillPaid;
+		this.isLatestBill = isLatestBill;
+		this.isFinalBill = isFinalBill;
+		this.billAmount = billAmount;
+		this.istacInclusiveBill = istacInclusiveBill;
+	}
+}
+
+
+class BillRunner{
+	public static void main(String[] bill){
+		Bill ref = new Bill(1 , 4789 , "14/07/2024","31/07/2024",true,false,false,478.36,true);
+		System.out.println("Bill details is started");
+		System.out.println("Bill referance is " +ref.billReferenceId);
+		System.out.println("Bill Sequance number is " +ref.billSequenceNo);
+		System.out.println("Bill Issue date is " +ref.billIssueDate);
+		System.out.println("Bill Due date is " +ref.billDueDate);
+		System.out.println("Is the bill paid " +ref.isBillPaid);
+		System.out.println("Is the Bill is Latest " +ref.isLatestBill);
+		System.out.println("Is this ia the Final bill "+ref.isFinalBill);
+		System.out.println("Bill amount is " +ref.billAmount);
+		System.out.println("Is tax is included to this bill "+ref.istacInclusiveBill);
+		System.out.println("Bill details is ended");
+}
+}
+
+3)
+
+keywords:reserved words/special words that have a predefined/specific meaning in the language.
+
+this:refers to the current instance of class, when there is a common name between local and the instance variable this keyword is used.
+this(): it calls the another coustructor in same class.
+
+4)It allows the JVM to call it without needing to create an object of the class, and also JVM will always look for the main method to compile the program.
+There are 2 types of methods
+1)Instance Method
+2)Static Method
+
+1)Instance Method:
+class Bicycle{
+
+	public static void main(String[] urbanTerrainGalaxy){
+		System.out.println("Main Started");
+			getFeatures();
+		System.out.println("Main Ended");
+	}
+	public static void getFeatures(){
+		System.out.println("getFeatures mathod started");
+			String bikeType = "Mountain Bike";
+			String ageRange = "Adult";
+			String brand = "Urban Terrain";
+			int numberOfSpeeds = 1;
+			String color = "White, Black";
+			System.out.println("The Bike Type is " + bikeType);
+			System.out.println("The Age Range is " + ageRange);
+			System.out.println("The Brand Name is " + brand);
+			System.out.println("The Number Of Speed is " + numberOfSpeeds);
+			System.out.println("The Color of Cycle " + color);
+		System.out.println("getFeatures method ended");
+		return;
+	}
+}
+
+5)
+
+6)commercial:is can be accessed by any one
+Organization: is can be accessed within the organized pepole only
+later we will give the company name 
+then we create a project folders in the systematic manner.
+
+7)
+
+
+8)no, we can not use instance variable inside the static method 
+static methods cannot directly access the instance variable because 
+the static methods can be called even when the objects of the class has been initiated
+
+
+9)it is an object and ability to take many forms 
+public class Engineering {
+    public void solveProblem(){
+        System.out.println("Solved complex problem by Engineer");
+    }
+
+public class MarineEngineering extends Engineering {
+    @Override
+    public void solveProblem() {
+        System.out.println("Solved complex problem by Marine Engineer");
+    }
+}
+public class EngineeringRunner {
+    public static void main(String[] args) {
+        //Parent ref = new Child();
+        Engineering ref = new MarineEngineering();
+        ref.solveProblem();
+}
+}
+
+
+
+10)Inherite the properties from the super class to sub class.
+
+example:public class Hospital {
+    Patient patient;
+    public  boolean addPatient(Patient patient){
+        boolean isPatientAdded = false;
+
+        if(patient!=null){
+            if(patient.patientName!=null )
+                this.patient=patient;
+            isPatientAdded = true;
+        }
+
+        return  isPatientAdded;
+    }
+
+    public void getPatient(){
+        System.out.println("Fetching Patient Info.........");
+        System.out.println("The Patient Name is " + this.patient.patientName);
+        System.out.println("The Patient Gender is " + this.patient.gender);
+        System.out.println("The Patient Blood Group is " + this.patient.bloodGroup);
+        System.out.println("The Patient Age is " + this.patient.age);
+        System.out.println("The Patient Id is " + this.patient.patientId);
+        System.out.println("The Patient Address is ");
+        this.patient.displayPatientAddress();
+    }
+    public boolean uppdatePatientAge(int newAge){
+        System.out.println("updating patient age....");
+        boolean isNewAge = false;
+        if(newAge>0){
+            this.patient.age = newAge;
+            isNewAge = true;
+        }
+        return isNewAge;
+    }
+    public boolean updatePatientName(String newName){
+        System.out.println("updating patient name...");
+        boolean isNewName = false;
+        if(newName!=null){
+            this.patient.patientName=newName;
+            isNewName = true;
+        }
+        return isNewName;
+    }
+  public boolean admissionRequired;
+              public boolean addPatient(Patient patient){
+                  boolean isAdded = false;
+                  System.out.println("child class addPatient started");
+                  if(admissionRequired == true)
+                      isAdded = super.addPatient(patient);
+                  else System.out.println("First pay the amount");
+                  System.out.println("child class addPatient ended");
+                  return isAdded;
+    }
